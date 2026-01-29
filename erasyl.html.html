@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erasl // 2026 Digital Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<a href="https://www.instagram.com/imyour_eraa/" target="_blank" class="ig-button">
+  Visit Instagram
+</a>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+        :root {
+            --bg-color: #050505;
+            --accent: #3b82f6;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 180px;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .footer-text {
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            opacity: 0.5;
+        }
+
+        .status-dot {
+            height: 8px;
+            width: 8px;
+            background-color: #10b981;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            box-shadow: 0 0 10px #10b981;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-12">
+    <!-- Background Glows -->
+    <div class="glow" style="top: -100px; left: -100px;"></div>
+    <div class="glow" style="bottom: -100px; right: -100px; background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);"></div>
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="flex justify-between items-end mb-12">
+            <div>
+                <h1 class="text-5xl font-extrabold tracking-tighter mb-2">ERASYL<span class="text-blue-500">.</span></h1>
+                <p class="text-gray-400 font-medium">Digital Creator & Developer & editor 
+            <div class="text-right hidden md:block">
+                <p id="time" class="text-xl font-mono"></p>
+                <p class="text-xs text-gray-500"> MONGOLIA</p>
+            </div>
+        </header>
+
+        <!-- Bento Grid Layout -->
+        <div class="bento-grid">
+            <!-- Large Card -->
+            <div class="glass col-span-2 row-span-2 p-8 flex flex-col justify-between">
+                <div>
+                    <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-xs font-bold mb-4 inline-block">ABOUT</span>
+                    <h2 class="text-3xl font-bold leading-tight">Бид 2026 оны вэб технологийг хөгжүүлэх болно</h2>
+                </div>
+                <p class="text-gray-400">мөн та ямар ч асуулт асууж болно.</p>
+            </div>
+
+            <!-- Medium Card -->
+            <div class="glass col-span-2 p-6 flex items-center justify-between">
+                <div>
+                    <h3 class="text-gray-400 text-sm mb-1">TUTORIAL</h3>
+                    <p class="text-xl font-semibold"><span class="status-dot"></span> coming soon </p>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-gray-600"></i>
+            </div>
+
+            <!-- Small Skill Card -->
+            <div class="glass p-6 flex flex-col justify-center items-center text-center">
+                <i class="fa-brands fa-html5 text-3xl mb-2 text-orange-500"></i>
+                <span class="text-sm font-bold">HTML5</span>
+            </div>
+
+            <!-- Small Skill Card -->
+            <div class="glass p-6 flex flex-col justify-center items-center text-center">
+                <i class="fa-brands fa-css3-alt text-3xl mb-2 text-blue-500"></i>
+                <span class="text-sm font-bold">CSS3</span>
+            </div>
+
+            <!-- Wide Project Card -->
+            <div class="glass col-span-2 p-6 flex flex-col justify-end relative overflow-hidden group">
+                <div class="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <h3 class="text-xl font-bold z-10">motivation</h3>
+                <p class="text-gray-400 text-sm z-10">The Creator of the Future Starts with You</p>
+            </div>
+
+            <!-- Contact/Social Card -->
+            <div class="glass col-span-2 p-6 flex items-center justify-around">
+                <a href="#" class="hover:text-blue-500 transition-colors"><i class="fa-brands fa-github text-2xl"></i></a>
+                <a href="#" class="hover:text-blue-500 transition-colors"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href="#" class="hover:text-blue-500 transition-colors"><i class="fa-brands fa-twitter text-2xl"></i></a>
+                <button class="bg-white text-black px-6 py-2 rounded-full font-bold text-sm hover:bg-blue-500 hover:text-white transition-all">US</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-20 border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="footer-text">CREATED BY ERASL</p>
+            <p class="footer-text">VERSION 2.0.26 // ALL RIGHTS RESERVED</p>
+            <p id="year-footer" class="footer-text">2026</p>
+        </footer>
+    </div>
+
+    <script>
+        // Real-time clock function
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('kk-KZ', { hour12: false });
+            document.getElementById('time').textContent = timeString;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Mouse hover glow effect for the whole body
+        document.body.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            // You can add logic here to make a light follow the cursor
+        });
+    </script>
+	<style>
+  .ig-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  
+  .ig-button:active {
+    transform: scale(0.95); /* Shrinks slightly when tapped */
+  }
+</style>
+<button 
+  onclick="window.open('https://www.instagram.com/imyour_eraa/', '_blank')"
+  style="padding: 10px 20px; cursor: pointer;">
+  Follow @imyour_eraa
+</button>
+</body>
+</html>
